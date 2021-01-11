@@ -21,7 +21,7 @@ const MovieList = () => {
   const filter = useSelector((state) => state.reducer.filter);
   let newMovies = handleFilter(movies, filter);
   return (
-    <div className='MovieList' >
+    <div className='MovieList'>
       {newMovies.map((movie) => (
         <MovieCard key={movie.id} {...movie} />
       ))}

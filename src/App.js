@@ -6,8 +6,11 @@ import Filter from './components/Filter';
 function App() {
   return (
     <div className='App'>
+      <div className='add-filter' >
+
       <MovieAdd />
       <Filter />
+      </div>
       <MovieList />
     </div>
   );

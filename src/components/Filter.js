@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { search } from '../redux/actions/actions';
+
 const Filter = () => {
   const dispatch = useDispatch();
   const [filter, setFilter] = useState('');

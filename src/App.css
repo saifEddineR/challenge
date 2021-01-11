@@ -1,4 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 .MovieList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+body {
+  margin: 0;
+  padding: 15px 80px;
+  font-family: 'Poppins', sans-serif !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+
+  background: rgb(163, 149, 155);
+  background: radial-gradient(
+    square,
+    rgb(142, 233, 245) 0%,
+    rgb(149, 248, 255) 150%
+  );
+  height: 100vh !important;
+  text-align: center !important;
+}
+
+.title {
+  height: 200px;
+}
+.add-filter {
+  display: flex;
+  justify-content: center;
+  
+}
+/* movieCard */
+.movieCard {
+  position: relative;
+  width: 200px;
+  height: 300px;
+}
+.title {
+  position: absolute;
+  justify-content: center;
+  bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  text-align: center;
+  width: 200px;
+  color: white;
+}
+.movieTitle {
+  text-align: center;
+  color: white;
+}
+.rating {
+  z-index: 5;
+  position: absolute;
+  left: 30%;
+  bottom: 0%;
+  text-align: center;
+}
+.remove {
+}
+.main-hr {
+  width: 30%;
+  border: none;
+  border-top: 1px solid #c3c3c3;
+}
+.icon-btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cdcdcd;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+}
+.add-btn:hover {
+  width: 120px;
+}
+.add-btn::before,
+.add-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: red;
+}
+.add-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.icon-btn:focus {
+  outline: none;
+}
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.add-btn:hover::before,
+.add-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+.add-btn:hover .btn-txt {
+  opacity: 1;
+}
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: red;
+  overflow: hidden;
+}
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+.add-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+.add-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
 }

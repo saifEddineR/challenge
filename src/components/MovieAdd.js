@@ -49,7 +49,7 @@ function AddModal() {
   return (
     <>
       <Button variant='primary' onClick={handleShow}>
-        Launch demo modal
+        Add a Movie
       </Button>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
